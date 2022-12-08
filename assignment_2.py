@@ -46,7 +46,6 @@ def compare_urban_population_growth():
     for country in countries:
         plt.plot(years, list(population_grwoth[country][40:]), '', label = country )
     
-#     plt.figure(figsize=(18, 18))
     plt.legend()
     plt.show()
 
@@ -78,7 +77,6 @@ def compare_agriculter_land_growth():
     for country in countries:
         plt.plot(years, list(agriculture_land_growth[country][40:]), '', label = country )
     
-#     plt.figure(figsize=(18, 18))
     plt.legend()
     plt.show()
 
@@ -116,7 +114,5 @@ def compare_urban_population_with_agriculture_land():
         plt.title(country)
         plt.legend()
         plt.show()
-    
-#     plt.figure(figsize=(18, 18))
     
 compare_urban_population_with_agriculture_land()
