@@ -4,6 +4,12 @@ import matplotlib.pyplot as plt
 
 def get_data(file_name, indicator):
     
+    """
+    Reading World Bank Climate data to analyze how the 
+    climate change afftect the total popultaion, 
+    Urban population and Aggricultural land
+    """
+    
     df = pd.read_csv(file_name, index_col=False)
     df = df[df['Indicator Name'] == indicator]
     df.drop(['Country Code', 'Indicator Code', 'Indicator Name'],
@@ -81,6 +87,11 @@ compare_agriculter_land_growth()
 
 
 def compare_urban_population_with_agriculture_land():
+
+    """
+    compare all the countries agricultiral land with own urban 
+    population growth %
+    """
     
     population_grwoth = get_data("API_19_DS2_en_csv_v2_4700503" \
                   "/API_19_DS2_en_csv_v2_4700503.csv", \
